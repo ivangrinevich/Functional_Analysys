@@ -1,16 +1,13 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from math import atan
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+x_0 = 0
+k = 0
+while True:
+    x_1 = 3 - (x_0 / (1 + x_0 ** 2)) - atan(x_0)
+    if abs(x_1 - x_0) < 0.00001:
+        print(x_1)
+        print(k)
+        break
+    x_0 = x_1
+    k += 1
